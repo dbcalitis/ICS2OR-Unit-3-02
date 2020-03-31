@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="Javascript">
+    <meta name="keywords" content="Javascript, HTML, Crossover">
+    <meta name="author" content="Daria Bernice Calitis">
+    <meta name="viewport"content="width=device-width, initial-scale+1.0">
+    <title>Trapezoid Area Calculator</title>
+  </head>
+  <body>
+    <h1>Trapezoid Area Calculator</h1>
+    <img src="./images/trapezoid.png">
+    <p id="answer">Fill the boxes below!</p>
+    <input id="base1" placeholder="Base1 (a)">
+    <input id="base2" placeholder="Base2 (b)">
+    <input id="height" placeholder="Height (h)">
+    <button id="calculate">Calculate</button>
+    <script>
+      let base1;
+      let base2;
+      let height;
+      let area;
+      
+      document.getElementById("calculate").addEventListener("click", trapezoidArea);
+      function trapezoidArea() {
+        base1 = document.getElementById("base1").value
+        base2 = document.getElementById("base2").value
+        height = document.getElementById("height").value
+        area = (base1 + base2) / 2 * height
+        document.getElementById("answer").textContent = "The area of the trapezoid is " + area + " units square."
+      }
+    </script>
+  </body>
+</html>
